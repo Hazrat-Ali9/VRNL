@@ -9,4 +9,4 @@ const Card = ({ title, content }) => {
 };
 
 export default Card;
-// Card
+// Card js
