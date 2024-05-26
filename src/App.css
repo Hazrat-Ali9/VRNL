@@ -1,0 +1,165 @@
+custom-hover-animation {
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .custom-hover-animation:hover {
+    background-color: transparent !important;
+    color: inherit;
+  }
+  
+  .custom-hover-animation::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 50px;
+    right: 0;
+    background: currentColor;
+    transition: width 0.3s ease;
+  }
+  
+  .custom-hover-animation:hover::after {
+    width: 100%;
+    left: 0;
+    background: currentColor;
+  }
+
+  .flip-card {
+    width: 500px;
+    height: 450px;
+    perspective: 1000px;
+    border: 12px solid; /* Set the border width */
+    border-image: linear-gradient(45deg, #FFD700, #FF8C00) 1; /* Gradient border */
+    box-sizing: border-box; /* Ensure border is included in element's dimensions */
+}
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #606060;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #606060;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .gradient-text {
+    background: linear-gradient(45deg, #FFD700, #FF8C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+  .slick-center .transform {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+  }
+  
+  .main-container {
+    margin: 4em auto 0 auto;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  
+  .coverflow-list {
+    width: 100%;
+  }
+  
+  .coverflow-item {
+    display: inline-block;
+    background: #414141;
+    margin: 0 -50px;
+    position: relative;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.9);
+  }
+  
+  .album-cover {
+    display: block;
+    height: 150px;
+    margin: 0;
+  }
+  
+  .album-cover img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+  }
+  
+  .album-name {
+    text-align: center;
+    display: block;
+    color: #444;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .coverflow-item {
+      margin: 0 -20px;
+    }
+  
+    .album-cover {
+      height: 100px;
+    }
+  
+    .album-cover img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .coverflow-item {
+      margin: 0 -10px;
+    }
+  
+    .album-cover {
+      height: 80px;
+    }
+  
+    .album-cover img {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .album-name {
+      font-size: 0.8em;
+    }
+  }
+  
+  
+  
+  
+
+
+  
