@@ -114,3 +114,5 @@ const Slider = () => {
 };
 
 export default Slider;
+
+// Slider js
